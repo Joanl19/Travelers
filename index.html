@@ -257,19 +257,19 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .hero-slide:nth-child(1) {
   background-image: linear-gradient(to bottom, rgba(26,20,16,0.4), rgba(26,20,16,0.7)),
-    url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1800&q=80');
+    url('https://images.unsplash.com/photo-1720819029162-8500607ae232?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlzaGlrZXNofGVufDB8fDB8fHww');
 }
 .hero-slide:nth-child(2) {
   background-image: linear-gradient(to bottom, rgba(26,20,16,0.4), rgba(26,20,16,0.7)),
-    url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1800&q=80');
+    url('https://plus.unsplash.com/premium_photo-1661964133089-630b18fef6e2?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3BpdGl8ZW58MHx8MHx8fDA%3D');
 }
 .hero-slide:nth-child(3) {
   background-image: linear-gradient(to bottom, rgba(26,20,16,0.4), rgba(26,20,16,0.7)),
-    url('https://images.unsplash.com/photo-1548013146-72479768bada?w=1800&q=80');
+    url('https://images.unsplash.com/photo-1705582832193-0849b41ddffc?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aW5kaWElMjBnYXRlJTIwZGVsaGl8ZW58MHx8MHx8fDA%3D');
 }
 .hero-slide:nth-child(4) {
   background-image: linear-gradient(to bottom, rgba(26,20,16,0.4), rgba(26,20,16,0.7)),
-    url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1800&q=80');
+    url('https://images.unsplash.com/photo-1599476160130-3af44b69ec6e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRham1haGFsfGVufDB8fDB8fHww');
 }
 
 .hero-content {
@@ -676,21 +676,22 @@ font-family: 'Poppins', sans-serif;
 }
 .vc-track {
   display: flex;
-  gap: 24px;
+  /* gap:0; */
   transition: transform 0.75s cubic-bezier(0.22,1,0.36,1);
   will-change: transform;
 }
 .vc-slide {
-  flex: 0 0 calc(60% - 12px);
+   flex: 0 0 100%;   /* 👈 ye change sabse important */
   position: relative;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
   transition: transform 0.6s ease, box-shadow 0.6s ease, opacity 0.6s ease;
-  opacity: 0.4;
-  transform: scale(0.93);
+  opacity: 1;       /* optional */
+  transform: scale(1); /* optional */
   aspect-ratio: 16/9;
   background: #111;
+   padding: 0 12px;
 }
 .vc-slide.active {
   opacity: 1;
@@ -736,8 +737,8 @@ font-family: 'Poppins', sans-serif;
   width: 24px;
 }
 .vc-dot.active { background: var(--gold); width: 48px; }
-@media (max-width: 900px) { .vc-slide { flex: 0 0 calc(80% - 12px); } }
-@media (max-width: 560px) { .vc-slide { flex: 0 0 calc(92% - 12px); } .vc-overlay { padding: 20px; } }
+@media (max-width: 1024px) { .vc-slide { flex: 0 0 calc(80% - 12px); } }
+@media (max-width: 768px) { .vc-slide { flex: 0 0 calc(92% - 12px); } .vc-overlay { padding: 20px; } }
 
 /* ============================================================
    BOOKING POPUP
@@ -1156,7 +1157,7 @@ footer {
      ============================================================ -->
 <nav id="navbar">
   <div class="container nav-inner">
-    <a class="nav-logo" href="#">Krish<span>na</span>Travel</a>
+    <a class="nav-logo" href="#">Kisho<span>ri</span>Travel</a>
     <ul class="nav-links">
       <li><a href="#packages">Packages</a></li>
       <li><a href="#gallery">Gallery</a></li>
@@ -1213,12 +1214,12 @@ footer {
     <div class="hero-scroll-line"></div>
   </div> -->
 
-  <!-- <div class="hero-dots">
+  <div class="hero-dots">
     <div class="hero-dot active"></div>
     <div class="hero-dot"></div>
     <div class="hero-dot"></div>
     <div class="hero-dot"></div>
-  </div> -->
+  </div>
 </section>
 
 <!-- ============================================================
@@ -1322,7 +1323,7 @@ footer {
 
       <!-- Video 1 — Rajasthan / Desert -->
       <div class="vc-slide active" data-index="0">
-        <video src="Rajsthan.mp4"
+        <video src="https://videos.pexels.com/video-files/31031041/13262889_1920_1080_60fps.mp4"
                autoplay muted loop playsinline preload="auto"></video>
         <div class="vc-overlay">
           <div class="vc-dest">Rajasthan</div>
@@ -1332,7 +1333,7 @@ footer {
 
       <!-- Video 2 — Ocean / Coastline -->
       <div class="vc-slide" data-index="1">
-        <video src="Goa.mp4"
+        <video src="https://videos.pexels.com/video-files/34590030/14659193_1920_1080_30fps.mp4"
                muted loop playsinline preload="none"></video>
         <div class="vc-overlay">
           <div class="vc-dest">Goa</div>
@@ -1342,7 +1343,7 @@ footer {
 
       <!-- Video 3 — Mountain / Forest -->
       <div class="vc-slide" data-index="2">
-        <video src="Himanchal.mp4"
+        <video src="https://videos.pexels.com/video-files/32999252/14064164_1920_1080_50fps.mp4"
                muted loop playsinline preload="none"></video>
         <div class="vc-overlay">
           <div class="vc-dest">Himachal Pradesh</div>
@@ -1352,7 +1353,7 @@ footer {
 
       <!-- Video 4 — River / Water -->
       <div class="vc-slide" data-index="3">
-        <video src="Kerla.mp4"
+        <video src="https://videos.pexels.com/video-files/35097635/14868725_1920_1080_25fps.mp4"
                muted loop playsinline preload="none"></video>
         <div class="vc-overlay">
           <div class="vc-dest">Kerala</div>
@@ -1362,7 +1363,7 @@ footer {
 
       <!-- Video 5 — City / Culture -->
       <div class="vc-slide" data-index="4">
-        <video src="Varansi.mp4"
+        <video src="https://videos.pexels.com/video-files/36631860/15530631_2560_1440_24fps.mp4"
                muted loop playsinline preload="none"></video>
         <div class="vc-overlay">
           <div class="vc-dest">Varanasi</div>
@@ -1782,7 +1783,7 @@ footer {
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="nav-logo">Krish<span>na</span>Travel</span>
+        <span class="nav-logo">Kisho<span>ri</span>Travel</span>
         <p>Crafting extraordinary travel experiences across India's most breathtaking destinations since 2008.</p>
       </div>
       <div class="footer-col">
@@ -1816,7 +1817,7 @@ footer {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 VoyageIndia. All rights reserved. Made with ♥ in India.</p>
+      <p>© 2026 KishoriTravel. All rights reserved. Made with <b>Jayant Developers♥</b>in India.</p>
       <div class="footer-socials">
         <a class="footer-social" href="#" aria-label="Instagram">
   <i class="fa-brands fa-instagram"></i>
